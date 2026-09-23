@@ -1,0 +1,47 @@
+# Runs the Telegram bot directly on GitHub Actions (free for PUBLIC repos).
+# How it works: each run executes the bot in polling mode for ~5h50m, then a
+# scheduled trigger starts the next run and cancels the old one (concurrency
+# handoff) — giving near-24/7 coverage with zero servers.
+#
+# REQUIRED: repo Settings > Secrets and variables > Actions > New repository secret:
+#   TELEGRAM_BOT_TOKEN, FMP_API_KEY
+#
+# CAVEATS:
+# - Free minutes: PUBLIC repos = unlimited; PRIVATE repos = 2,000 min/month
+#   (a 24/7 bot needs ~43,000 min/month, so the repo must be PUBLIC for this).
+# - SQLite data (watchlist/alerts/portfolio) resets on every restart.
+# - ~1-2 min gap during each restart while dependencies install.
+
+name: Run Telegram Bot
+
+on:
+  workflow_dispatch: {}            # manual start button
+  schedule:
+    - cron: "37 */6 * * *"         # restart every 6h (odd minute avoids congestion)
+
+concurrency:
+  group: telegram-bot              # new run cancels the old one (clean handoff)
+  cancel-in-progress: true
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350           # stop just before GitHub's 6h job limit
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run bot (polling mode)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          MODE: polling
+          DATABASE_URL: sqlite:///stock_bot.db
+          LOG_LEVEL: INFO
+        run: python main.py
