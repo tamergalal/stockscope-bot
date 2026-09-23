@@ -1,0 +1,23 @@
+# Render.com free-tier deployment blueprint (webhook mode)
+# 1. Push this repo to GitHub
+# 2. On Render: New > Blueprint > connect repo (or New > Web Service)
+services:
+  - type: web
+    name: stockscope-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false        # set in Render dashboard (secret)
+      - key: FMP_API_KEY
+        sync: false        # set in Render dashboard (secret)
+      - key: MODE
+        value: webhook
+      - key: LOG_LEVEL
+        value: INFO
+      # WEBHOOK_URL is set after first deploy, e.g. https://stockscope-bot.onrender.com
+      # then redeploy so the webhook registers with Telegram.
+      - key: WEBHOOK_URL
+        sync: false

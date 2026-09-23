@@ -1,0 +1,385 @@
+2026-09-23 15:48:13,441 INFO apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-23 15:48:13,483 INFO apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-23 15:48:13,483 INFO __main__: Bot starting (mode=polling)...
+2026-09-23 15:48:14,316 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getMe "HTTP/1.1 200 OK"
+2026-09-23 15:48:14,399 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/deleteWebhook "HTTP/1.1 200 OK"
+2026-09-23 15:48:14,404 INFO apscheduler.scheduler: Added job "check_alerts" to job store "default"
+2026-09-23 15:48:14,405 INFO apscheduler.scheduler: Added job "daily_digest" to job store "default"
+2026-09-23 15:48:14,405 INFO apscheduler.scheduler: Scheduler started
+2026-09-23 15:48:14,405 INFO telegram.ext.Application: Application started
+2026-09-23 15:48:23,446 INFO apscheduler.executors.default: Running job "check_alerts (trigger: interval[0:15:00], next run at: 2026-09-23 13:03:23 UTC)" (scheduled at 2026-09-23 12:48:23.432365+00:00)
+2026-09-23 15:48:23,467 INFO apscheduler.executors.default: Job "check_alerts (trigger: interval[0:15:00], next run at: 2026-09-23 13:03:23 UTC)" executed successfully
+2026-09-23 15:48:24,669 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:48:34,738 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:48:44,810 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:48:54,887 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:49:04,959 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:49:15,029 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:49:25,100 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:49:35,169 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:49:45,241 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:49:55,312 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:50:05,383 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:50:15,454 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:50:25,525 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:50:35,600 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:50:45,673 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:50:55,742 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:51:05,821 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:51:15,893 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:51:25,964 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:51:36,035 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:51:46,105 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:51:56,240 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:52:07,093 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:52:17,165 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:52:27,236 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:52:37,305 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:52:47,375 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:52:57,445 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:53:07,515 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:53:17,589 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:53:27,660 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:53:37,746 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:53:47,816 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:53:57,913 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:54:07,984 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:54:18,056 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:54:28,127 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:54:38,198 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:54:48,268 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:54:58,340 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:55:08,412 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:55:18,483 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:55:28,553 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:55:38,625 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:55:48,696 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:55:58,767 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:56:08,839 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:56:18,907 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:56:28,978 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:56:39,124 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:56:49,197 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:56:59,270 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:57:09,345 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:57:19,416 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:57:29,485 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:57:39,557 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:57:49,628 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:57:59,700 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:58:09,770 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:58:19,841 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:58:29,912 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:58:39,983 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:58:50,055 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:59:00,129 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:59:10,202 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:59:20,278 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:59:30,350 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:59:40,727 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 15:59:50,831 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:00:00,941 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:00:11,388 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:00:21,460 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:00:31,540 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:00:41,611 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:00:51,683 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:01:01,786 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:01:11,859 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:01:21,930 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:01:32,012 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:01:42,083 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:01:52,154 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:02:02,224 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:02:12,294 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:02:22,372 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:02:32,444 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:02:42,516 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:02:52,587 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:03:02,660 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:03:12,732 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:03:22,830 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:03:23,447 INFO apscheduler.executors.default: Running job "check_alerts (trigger: interval[0:15:00], next run at: 2026-09-23 13:18:23 UTC)" (scheduled at 2026-09-23 13:03:23.432365+00:00)
+2026-09-23 16:03:23,450 INFO apscheduler.executors.default: Job "check_alerts (trigger: interval[0:15:00], next run at: 2026-09-23 13:18:23 UTC)" executed successfully
+2026-09-23 16:03:32,901 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:03:42,974 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:03:53,045 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:04:03,115 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:04:13,185 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:04:23,327 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:04:33,395 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:04:43,465 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:04:53,535 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:05:03,606 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:05:13,678 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:05:23,746 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:05:33,817 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:05:43,888 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:05:53,958 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:06:04,028 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:06:14,100 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:06:24,169 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:06:34,241 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:06:44,310 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:06:54,380 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:07:04,450 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:07:14,518 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:07:24,589 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:07:34,659 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:07:44,729 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:07:54,800 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:08:04,868 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:08:14,939 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:08:25,009 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:08:35,078 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:08:45,147 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:08:55,216 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:09:05,284 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:09:15,353 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:09:25,421 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:09:35,490 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:09:45,557 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:09:55,625 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:10:05,694 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:10:15,764 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:10:25,834 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:10:35,903 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:10:45,973 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:10:56,041 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:11:06,112 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:11:11,392 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:11:11,844 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendMessage "HTTP/1.1 200 OK"
+2026-09-23 16:11:11,948 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendChatAction "HTTP/1.1 200 OK"
+2026-09-23 16:11:21,028 ERROR yfinance: $ESRS.CA: No data found, symbol may be delisted
+2026-09-23 16:11:21,030 WARNING stock_bot.data.providers: Provider attempt 1 failed (No price data returned for ESRS.CA); retrying in 1.0s
+2026-09-23 16:11:21,471 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:11:22,496 ERROR yfinance: $ESRS.CA: No data found, symbol may be delisted
+2026-09-23 16:11:22,497 WARNING stock_bot.data.providers: Provider attempt 2 failed (No price data returned for ESRS.CA); retrying in 2.0s
+2026-09-23 16:11:25,189 ERROR yfinance: $ESRS.CA: No data found, symbol may be delisted
+2026-09-23 16:11:25,190 WARNING stock_bot.data.providers: Provider attempt 3 failed (No price data returned for ESRS.CA); retrying in 4.0s
+2026-09-23 16:11:31,543 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:11:39,588 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/deleteMessage "HTTP/1.1 200 OK"
+2026-09-23 16:11:39,729 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendMessage "HTTP/1.1 200 OK"
+2026-09-23 16:11:41,612 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:11:51,682 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:12:01,753 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:12:11,823 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:12:13,794 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:12:14,101 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendMessage "HTTP/1.1 200 OK"
+2026-09-23 16:12:14,200 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendChatAction "HTTP/1.1 200 OK"
+2026-09-23 16:12:16,291 ERROR yfinance: HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ISDE"}}}
+2026-09-23 16:12:17,150 ERROR yfinance: $ISDE: No data found, symbol may be delisted
+2026-09-23 16:12:17,151 WARNING stock_bot.data.providers: Provider attempt 1 failed (No price data returned for ISDE); retrying in 1.0s
+2026-09-23 16:12:18,813 ERROR yfinance: HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ISDE"}}}
+2026-09-23 16:12:19,539 ERROR yfinance: $ISDE: No data found, symbol may be delisted
+2026-09-23 16:12:19,539 WARNING stock_bot.data.providers: Provider attempt 2 failed (No price data returned for ISDE); retrying in 2.0s
+2026-09-23 16:12:22,044 ERROR yfinance: $ISDE: No data found, symbol may be delisted
+2026-09-23 16:12:22,045 WARNING stock_bot.data.providers: Provider attempt 3 failed (No price data returned for ISDE); retrying in 4.0s
+2026-09-23 16:12:23,865 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:12:27,333 ERROR yfinance: $ISDU: No data found, symbol may be delisted
+2026-09-23 16:12:27,334 WARNING stock_bot.data.providers: Provider attempt 1 failed (No price data returned for ISDU); retrying in 1.0s
+2026-09-23 16:12:28,790 ERROR yfinance: $ISDU: No data found, symbol may be delisted
+2026-09-23 16:12:28,791 WARNING stock_bot.data.providers: Provider attempt 2 failed (No price data returned for ISDU); retrying in 2.0s
+2026-09-23 16:12:31,256 ERROR yfinance: $ISDU: No data found, symbol may be delisted
+2026-09-23 16:12:31,256 WARNING stock_bot.data.providers: Provider attempt 3 failed (No price data returned for ISDU); retrying in 4.0s
+2026-09-23 16:12:33,935 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:12:36,219 ERROR yfinance: $ISWD: No data found, symbol may be delisted
+2026-09-23 16:12:36,221 WARNING stock_bot.data.providers: Provider attempt 1 failed (No price data returned for ISWD); retrying in 1.0s
+2026-09-23 16:12:37,786 ERROR yfinance: $ISWD: No data found, symbol may be delisted
+2026-09-23 16:12:37,787 WARNING stock_bot.data.providers: Provider attempt 2 failed (No price data returned for ISWD); retrying in 2.0s
+2026-09-23 16:12:40,215 ERROR yfinance: $ISWD: No data found, symbol may be delisted
+2026-09-23 16:12:40,216 WARNING stock_bot.data.providers: Provider attempt 3 failed (No price data returned for ISWD); retrying in 4.0s
+2026-09-23 16:12:44,004 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:12:47,602 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/deleteMessage "HTTP/1.1 200 OK"
+2026-09-23 16:12:47,727 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendMessage "HTTP/1.1 200 OK"
+2026-09-23 16:12:54,075 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:13:04,145 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:13:14,215 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:13:14,486 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:13:14,795 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendMessage "HTTP/1.1 200 OK"
+2026-09-23 16:13:15,054 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendChatAction "HTTP/1.1 200 OK"
+2026-09-23 16:13:16,497 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:18,093 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:20,094 WARNING stock_bot.data.providers: FMP key_metrics failed for ABBV: FMP 403: key/plan rejected
+2026-09-23 16:13:20,695 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:22,289 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:24,289 WARNING stock_bot.data.providers: FMP ratios failed for ABBV: FMP 403: key/plan rejected
+2026-09-23 16:13:24,645 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:13:26,175 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:27,772 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:29,772 WARNING stock_bot.data.providers: FMP key_metrics failed for ADBE: FMP 403: key/plan rejected
+2026-09-23 16:13:30,343 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:31,933 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:33,934 WARNING stock_bot.data.providers: FMP ratios failed for ADBE: FMP 403: key/plan rejected
+2026-09-23 16:13:34,714 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:13:35,495 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:37,096 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:39,096 WARNING stock_bot.data.providers: FMP key_metrics failed for AMD: FMP 403: key/plan rejected
+2026-09-23 16:13:39,668 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:41,277 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:43,278 WARNING stock_bot.data.providers: FMP ratios failed for AMD: FMP 403: key/plan rejected
+2026-09-23 16:13:44,783 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:13:44,808 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:46,413 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:48,413 WARNING stock_bot.data.providers: FMP key_metrics failed for AVGO: FMP 403: key/plan rejected
+2026-09-23 16:13:49,047 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:50,628 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:52,629 WARNING stock_bot.data.providers: FMP ratios failed for AVGO: FMP 403: key/plan rejected
+2026-09-23 16:13:54,432 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:13:54,853 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:13:56,023 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:13:58,023 WARNING stock_bot.data.providers: FMP key_metrics failed for CAT: FMP 403: key/plan rejected
+2026-09-23 16:13:58,610 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:00,208 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:02,209 WARNING stock_bot.data.providers: FMP ratios failed for CAT: FMP 403: key/plan rejected
+2026-09-23 16:14:03,924 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:04,924 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:14:05,517 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:07,518 WARNING stock_bot.data.providers: FMP key_metrics failed for CRM: FMP 403: key/plan rejected
+2026-09-23 16:14:08,140 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:09,718 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:11,718 WARNING stock_bot.data.providers: FMP ratios failed for CRM: FMP 403: key/plan rejected
+2026-09-23 16:14:13,236 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:14,816 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:14,996 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:14:16,816 WARNING stock_bot.data.providers: FMP key_metrics failed for CSCO: FMP 403: key/plan rejected
+2026-09-23 16:14:17,403 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:19,018 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:21,019 WARNING stock_bot.data.providers: FMP ratios failed for CSCO: FMP 403: key/plan rejected
+2026-09-23 16:14:22,632 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:24,212 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:25,066 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:14:26,213 WARNING stock_bot.data.providers: FMP key_metrics failed for CVX: FMP 403: key/plan rejected
+2026-09-23 16:14:26,800 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:28,370 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:30,371 WARNING stock_bot.data.providers: FMP ratios failed for CVX: FMP 403: key/plan rejected
+2026-09-23 16:14:32,519 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:34,099 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:35,138 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:14:36,100 WARNING stock_bot.data.providers: FMP key_metrics failed for GE: FMP 403: key/plan rejected
+2026-09-23 16:14:36,673 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:38,254 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:40,254 WARNING stock_bot.data.providers: FMP ratios failed for GE: FMP 403: key/plan rejected
+2026-09-23 16:14:41,691 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:43,252 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:45,209 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:14:45,253 WARNING stock_bot.data.providers: FMP key_metrics failed for GOOGL: FMP 403: key/plan rejected
+2026-09-23 16:14:45,822 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:47,415 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:49,416 WARNING stock_bot.data.providers: FMP ratios failed for GOOGL: FMP 403: key/plan rejected
+2026-09-23 16:14:51,023 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:52,609 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:54,610 WARNING stock_bot.data.providers: FMP key_metrics failed for HD: FMP 403: key/plan rejected
+2026-09-23 16:14:55,186 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:14:55,278 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:14:56,764 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:14:58,764 WARNING stock_bot.data.providers: FMP ratios failed for HD: FMP 403: key/plan rejected
+2026-09-23 16:15:00,713 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:02,282 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:04,283 WARNING stock_bot.data.providers: FMP key_metrics failed for IBM: FMP 403: key/plan rejected
+2026-09-23 16:15:04,884 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:05,349 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:15:06,540 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:08,540 WARNING stock_bot.data.providers: FMP ratios failed for IBM: FMP 403: key/plan rejected
+2026-09-23 16:15:10,267 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:11,953 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:13,954 WARNING stock_bot.data.providers: FMP key_metrics failed for JNJ: FMP 403: key/plan rejected
+2026-09-23 16:15:14,961 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:15,419 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:15:16,549 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:18,550 WARNING stock_bot.data.providers: FMP ratios failed for JNJ: FMP 403: key/plan rejected
+2026-09-23 16:15:20,414 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:21,986 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:23,987 WARNING stock_bot.data.providers: FMP key_metrics failed for MSFT: FMP 403: key/plan rejected
+2026-09-23 16:15:24,581 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:25,491 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:15:26,171 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:28,171 WARNING stock_bot.data.providers: FMP ratios failed for MSFT: FMP 403: key/plan rejected
+2026-09-23 16:15:29,818 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:31,388 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:33,389 WARNING stock_bot.data.providers: FMP key_metrics failed for NKE: FMP 403: key/plan rejected
+2026-09-23 16:15:33,986 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:35,548 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:35,561 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:15:37,548 WARNING stock_bot.data.providers: FMP ratios failed for NKE: FMP 403: key/plan rejected
+2026-09-23 16:15:39,144 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:40,729 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:42,729 WARNING stock_bot.data.providers: FMP key_metrics failed for NVDA: FMP 403: key/plan rejected
+2026-09-23 16:15:43,311 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:44,895 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:45,631 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:15:46,895 WARNING stock_bot.data.providers: FMP ratios failed for NVDA: FMP 403: key/plan rejected
+2026-09-23 16:15:48,751 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:50,335 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:52,336 WARNING stock_bot.data.providers: FMP key_metrics failed for ORCL: FMP 403: key/plan rejected
+2026-09-23 16:15:52,912 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:54,501 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:15:55,701 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:15:56,501 WARNING stock_bot.data.providers: FMP ratios failed for ORCL: FMP 403: key/plan rejected
+2026-09-23 16:15:58,024 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:15:59,605 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:01,606 WARNING stock_bot.data.providers: FMP key_metrics failed for PFE: FMP 403: key/plan rejected
+2026-09-23 16:16:02,314 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:03,889 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:05,773 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:16:05,890 WARNING stock_bot.data.providers: FMP ratios failed for PFE: FMP 403: key/plan rejected
+2026-09-23 16:16:07,414 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:09,389 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:11,389 WARNING stock_bot.data.providers: FMP key_metrics failed for PLTR: FMP 403: key/plan rejected
+2026-09-23 16:16:12,032 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:13,597 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:15,598 WARNING stock_bot.data.providers: FMP ratios failed for PLTR: FMP 403: key/plan rejected
+2026-09-23 16:16:15,843 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:16:17,277 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:18,853 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:20,854 WARNING stock_bot.data.providers: FMP key_metrics failed for QCOM: FMP 403: key/plan rejected
+2026-09-23 16:16:21,610 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:23,194 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:25,195 WARNING stock_bot.data.providers: FMP ratios failed for QCOM: FMP 403: key/plan rejected
+2026-09-23 16:16:25,913 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:16:26,655 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:28,247 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:30,248 WARNING stock_bot.data.providers: FMP key_metrics failed for TSLA: FMP 403: key/plan rejected
+2026-09-23 16:16:30,840 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:32,416 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:34,416 WARNING stock_bot.data.providers: FMP ratios failed for TSLA: FMP 403: key/plan rejected
+2026-09-23 16:16:36,010 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:16:36,135 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:37,724 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:39,725 WARNING stock_bot.data.providers: FMP key_metrics failed for TXN: FMP 403: key/plan rejected
+2026-09-23 16:16:40,299 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:41,886 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:43,886 WARNING stock_bot.data.providers: FMP ratios failed for TXN: FMP 403: key/plan rejected
+2026-09-23 16:16:45,413 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:46,082 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:16:47,008 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:49,009 WARNING stock_bot.data.providers: FMP key_metrics failed for UBER: FMP 403: key/plan rejected
+2026-09-23 16:16:49,599 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:51,193 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:53,194 WARNING stock_bot.data.providers: FMP ratios failed for UBER: FMP 403: key/plan rejected
+2026-09-23 16:16:54,766 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:16:56,152 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:16:56,351 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:16:58,352 WARNING stock_bot.data.providers: FMP key_metrics failed for XOM: FMP 403: key/plan rejected
+2026-09-23 16:16:58,949 WARNING stock_bot.data.providers: Provider attempt 1 failed (FMP 403: key/plan rejected); retrying in 1.0s
+2026-09-23 16:17:00,542 WARNING stock_bot.data.providers: Provider attempt 2 failed (FMP 403: key/plan rejected); retrying in 2.0s
+2026-09-23 16:17:02,543 WARNING stock_bot.data.providers: FMP ratios failed for XOM: FMP 403: key/plan rejected
+2026-09-23 16:17:03,087 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/deleteMessage "HTTP/1.1 200 OK"
+2026-09-23 16:17:03,199 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendMessage "HTTP/1.1 200 OK"
+2026-09-23 16:17:06,221 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:17:16,291 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:17:26,361 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:17:36,430 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:17:46,500 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:17:56,569 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:18:06,685 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:18:16,757 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:18:19,465 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:18:19,788 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendMessage "HTTP/1.1 200 OK"
+2026-09-23 16:18:19,988 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendChatAction "HTTP/1.1 200 OK"
+2026-09-23 16:18:20,189 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/deleteMessage "HTTP/1.1 200 OK"
+2026-09-23 16:18:20,372 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/sendMessage "HTTP/1.1 200 OK"
+2026-09-23 16:18:23,447 INFO apscheduler.executors.default: Running job "check_alerts (trigger: interval[0:15:00], next run at: 2026-09-23 13:33:23 UTC)" (scheduled at 2026-09-23 13:18:23.432365+00:00)
+2026-09-23 16:18:23,449 INFO apscheduler.executors.default: Job "check_alerts (trigger: interval[0:15:00], next run at: 2026-09-23 13:33:23 UTC)" executed successfully
+2026-09-23 16:18:29,537 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"
+2026-09-23 16:18:39,604 INFO httpx: HTTP Request: POST https://api.telegram.org/bot8819716133:AAERtLdfg3NeANLYR7-HbGweDuP2954sr08/getUpdates "HTTP/1.1 200 OK"

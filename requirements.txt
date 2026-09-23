@@ -1,0 +1,11 @@
+python-telegram-bot[job-queue]>=21.6,<23
+yfinance>=0.2.40
+pandas>=2.1
+numpy>=1.26
+mplfinance>=0.12.10b0
+matplotlib>=3.8
+SQLAlchemy>=2.0
+python-dotenv>=1.0
+cachetools>=5.3
+requests>=2.31
+pytest>=8.0

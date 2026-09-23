@@ -1,0 +1,12 @@
+.env
+*.db
+__pycache__/
+*.pyc
+charts_tmp/
+bot.log*
+.pytest_cache/
+_smoke.py
+_e2e.py
+_debug_tech.py
+_live_test.py
+_check_imports.py

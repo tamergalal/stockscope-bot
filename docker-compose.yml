@@ -1,0 +1,11 @@
+services:
+  stock-bot:
+    build: .
+    container_name: stock-bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - bot_data:/app/data
+
+volumes:
+  bot_data:
