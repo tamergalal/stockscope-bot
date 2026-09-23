@@ -14,4 +14,7 @@ COPY . .
 ENV DATABASE_URL=sqlite:////app/data/stock_bot.db
 RUN mkdir -p /app/data
 
+# Hugging Face Spaces serve on port 7860 (webhook mode)
+EXPOSE 7860
+
 CMD ["python", "main.py"]

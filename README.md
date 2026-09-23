@@ -1,3 +1,11 @@
+---
+title: StockScope Bot
+emoji: 📈
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # 📈 StockScope Bot — EGX + US Stocks + ETF Analysis Telegram Bot
 
 A production-ready Telegram bot that performs **technical + fundamental analysis**

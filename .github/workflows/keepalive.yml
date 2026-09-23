@@ -1,0 +1,15 @@
+# Free keep-alive: pings the Hugging Face Space every 25 min so the free
+# instance doesn't sleep. (GitHub Actions cron is free; alternatively use
+# UptimeRobot.com with a 5-minute HTTP monitor — more reliable.)
+name: Keep Space Awake
+on:
+  schedule:
+    - cron: "*/25 * * * *"
+  workflow_dispatch: {}   # manual trigger too
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping the Space
+        run: curl -s -o /dev/null -w "Space responded: %{http_code}\n" https://tamergalal-stockscope-bot.hf.space
