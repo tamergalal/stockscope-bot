@@ -58,7 +58,15 @@ class AnalysisService:
         rec = make_recommendation(tech, fund, asset_type)
         sharia_res = screen(symbol, market, fund_data.get("yf", {}))
 
-        quote = self.data.get_quote(symbol)
+        # Derive the price snapshot from the already-fetched daily bars instead
+        # of a separate quote request — saves one network round-trip per symbol
+        # (matters a lot when scanning a whole universe).
+        df = df_daily.dropna(subset=["Close"])
+        last = df.iloc[-1]
+        prev = df.iloc[-2] if len(df) > 1 else last
+        price = float(last["Close"])
+        change_pct = (round(float((last["Close"] - prev["Close"]) / prev["Close"] * 100), 2)
+                      if prev["Close"] else 0.0)
         meta = symbol_meta(symbol)
         currency = "EGP" if market == "egx" else "USD"
 
@@ -68,20 +76,35 @@ class AnalysisService:
             symbol=symbol, market=market, currency=currency,
             name=meta.get("name", fund_data.get("yf", {}).get("shortName", symbol)),
             tech=tech, fund=fund, rec=rec,
-            price=quote["price"], change_pct=quote["change_pct"],
+            price=price, change_pct=change_pct,
             sharia=sharia_res,
         )
+
+    async def _analyze_many(self, symbols: list[str],
+                            concurrency: int = 5) -> list[FullReport]:
+        """Analyze many symbols concurrently (bounded to stay rate-limit friendly).
+
+        Provider calls are blocking network I/O, so running ~5 in parallel cuts
+        a full-universe scan from minutes to tens of seconds without hammering
+        Yahoo. Symbols that fail (delisted, no data) are skipped.
+        """
+        sem = asyncio.Semaphore(concurrency)
+
+        async def _one(sym: str) -> FullReport | None:
+            async with sem:
+                try:
+                    return await self.analyze(sym)
+                except Exception:
+                    return None
+
+        results = await asyncio.gather(*(_one(s) for s in symbols))
+        return [r for r in results if r is not None]
 
     async def scan(self, market: str, top_n: int = 5) -> list[FullReport]:
         """Analyze all symbols of a market, return top N by composite score."""
         from ..data.symbols import EGX_SYMBOLS, ETF_SYMBOLS, US_SYMBOLS
         universe = {"egx": EGX_SYMBOLS, "us": US_SYMBOLS, "etf": ETF_SYMBOLS}.get(market, {})
-        reports: list[FullReport] = []
-        for sym in universe:
-            try:
-                reports.append(await self.analyze(sym))
-            except Exception:
-                continue  # skip symbols that fail (delisted, no data)
+        reports = await self._analyze_many(list(universe))
         reports.sort(key=lambda r: r.rec.composite, reverse=True)
         return reports[:top_n]
 
@@ -96,13 +119,7 @@ class AnalysisService:
             "us": sorted(SHARIA_US_SEED),
             "etf": sorted(SHARIA_ETFS.keys()),
         }.get(market, [])
-        reports: list[FullReport] = []
-        for sym in universe:
-            try:
-                r = await self.analyze(sym)
-                if r.sharia.status != "NON_COMPLIANT":
-                    reports.append(r)
-            except Exception:
-                continue
+        analyzed = await self._analyze_many(universe)
+        reports = [r for r in analyzed if r.sharia.status != "NON_COMPLIANT"]
         reports.sort(key=lambda r: r.rec.composite, reverse=True)
         return reports[:top_n]

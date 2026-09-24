@@ -9,6 +9,7 @@ threads by callers; results are cached with TTL.
 from __future__ import annotations
 
 import logging
+import threading
 import time
 from dataclasses import dataclass, field
 from typing import Any
@@ -47,12 +48,15 @@ class YFinanceProvider:
     def __init__(self) -> None:
         self._ohlcv_cache: TTLCache = TTLCache(maxsize=512, ttl=settings.ohlcv_cache_ttl)
         self._info_cache: TTLCache = TTLCache(maxsize=512, ttl=settings.fundamentals_cache_ttl)
+        # TTLCache is not thread-safe; scans analyze symbols in parallel threads.
+        self._lock = threading.Lock()
 
     def get_ohlcv(self, symbol: str, period: str = "1y", interval: str = "1d") -> pd.DataFrame:
         """Return OHLCV DataFrame indexed by date, columns Open/High/Low/Close/Volume."""
         key = (symbol, period, interval)
-        if key in self._ohlcv_cache:
-            return self._ohlcv_cache[key]
+        with self._lock:
+            if key in self._ohlcv_cache:
+                return self._ohlcv_cache[key]
 
         def _fetch() -> pd.DataFrame:
             df = yf.Ticker(symbol).history(period=period, interval=interval, auto_adjust=True)
@@ -63,19 +67,22 @@ class YFinanceProvider:
             return df
 
         df = _retry(_fetch)
-        self._ohlcv_cache[key] = df
+        with self._lock:
+            self._ohlcv_cache[key] = df
         return df
 
     def get_info(self, symbol: str) -> dict[str, Any]:
         """Return the raw yfinance .info dict (cached 24h). Never raises."""
-        if symbol in self._info_cache:
-            return self._info_cache[symbol]
+        with self._lock:
+            if symbol in self._info_cache:
+                return self._info_cache[symbol]
         info: dict[str, Any] = {}
         try:
             info = dict(_retry(lambda: yf.Ticker(symbol).info or {}, attempts=2))
         except Exception as exc:  # noqa: BLE001
             logger.warning("info fetch failed for %s: %s", symbol, exc)
-        self._info_cache[symbol] = info
+        with self._lock:
+            self._info_cache[symbol] = info
         return info
 
     def get_quote(self, symbol: str) -> dict[str, Any]:
@@ -110,6 +117,7 @@ class FMPProvider:
         self.api_key = api_key or settings.fmp_api_key
         self._disabled = False
         self._cache: TTLCache = TTLCache(maxsize=256, ttl=settings.fundamentals_cache_ttl)
+        self._lock = threading.Lock()
 
     @property
     def available(self) -> bool:
@@ -117,8 +125,9 @@ class FMPProvider:
 
     def _get(self, path: str) -> Any:
         url = f"{self.BASE}{path}"
-        if url in self._cache:
-            return self._cache[url]
+        with self._lock:
+            if url in self._cache:
+                return self._cache[url]
 
         def _fetch():
             resp = requests.get(url, params={"apikey": self.api_key}, timeout=15)
@@ -134,7 +143,8 @@ class FMPProvider:
             logger.warning("FMP disabled for this session (key/plan rejected). "
                            "Fundamentals will use yfinance fallback.")
             raise
-        self._cache[url] = data
+        with self._lock:
+            self._cache[url] = data
         return data
 
     def key_metrics(self, symbol: str) -> dict[str, Any]:

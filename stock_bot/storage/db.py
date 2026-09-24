@@ -83,7 +83,15 @@ class RecommendationLog(Base):
         DateTime, default=lambda: datetime.now(timezone.utc), index=True)
 
 
-engine = create_engine(settings.database_url, echo=False, future=True)
+# SQLite: allow cross-thread use (scans analyze symbols in parallel threads) and
+# wait up to 30s on "database is locked" instead of failing immediately.
+_connect_args: dict = (
+    {"check_same_thread": False, "timeout": 30}
+    if settings.database_url.startswith("sqlite")
+    else {}
+)
+engine = create_engine(settings.database_url, echo=False, future=True,
+                       connect_args=_connect_args)
 SessionLocal = sessionmaker(bind=engine, expire_on_commit=False, future=True)
 
 

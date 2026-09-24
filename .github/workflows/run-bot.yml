@@ -33,6 +33,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip                 # reuse packages between runs -> ~30s startup instead of ~2min
 
       - name: Install dependencies
         run: pip install -r requirements.txt
