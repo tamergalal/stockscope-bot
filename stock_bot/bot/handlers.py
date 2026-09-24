@@ -10,14 +10,14 @@ from telegram.ext import ContextTypes
 
 from ..analysis.charts import render_chart
 from ..analysis.service import AnalysisService
-from ..config import DISCLAIMER_FULL
+from ..config import DISCLAIMER_FULL, settings
 from ..data.providers import DataProviderError
 from ..data.symbols import detect_market, normalize_symbol
 from ..storage import repo
 from ..storage.db import init_db
 from . import formatting as fmt
-from .keyboards import (analysis_actions, market_picker, settings_keyboard,
-                        watchlist_quick)
+from .keyboards import (analysis_actions, cheap_picker, market_picker,
+                        settings_keyboard, watchlist_quick)
 from .messages import rec_emoji, t
 
 logger = logging.getLogger(__name__)
@@ -270,6 +270,25 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                          f"{r.rec.composite:.0f}/100 ({r.price:.2f} {r.currency})")
         lines += ["", t("sharia_footer", lang)]
         await query.message.reply_text("\n".join(lines), parse_mode=ParseMode.HTML)
+    elif action == "cheap":
+        market = payload
+        max_price = (settings.cheap_max_price_egx if market == "egx"
+                     else settings.cheap_max_price_us)
+        currency = "EGP" if market == "egx" else "USD"
+        await query.message.reply_text(
+            t("cheap_scanning", lang, market=market.upper(),
+              price=max_price, currency=currency),
+            parse_mode=ParseMode.HTML)
+        reports = await service.scan_cheap(market, max_price, top_n=10)
+        if not reports:
+            await query.message.reply_text(
+                t("cheap_empty", lang, market=market.upper(), price=max_price,
+                  currency=currency, market_lower=market),
+                parse_mode=ParseMode.HTML)
+            return
+        await query.message.reply_text(
+            "\n".join(_cheap_lines(reports, market, max_price, lang)),
+            parse_mode=ParseMode.HTML)
     elif action == "scan":
         await query.message.reply_text(t("analyzing", lang, symbol=payload.upper()),
                                        parse_mode=ParseMode.HTML)
@@ -349,6 +368,70 @@ async def _do_sharia_scan(update: Update, market: str, lang: str) -> None:
     lines += ["", t("sharia_footer", lang), "",
               "Use /analyze &lt;SYMBOL&gt; for the full report."]
     await update.message.reply_text("\n".join(lines), parse_mode=ParseMode.HTML)
+
+
+def _cheap_threshold(market: str, raw: str | None) -> float | None:
+    """Default cap from settings, or a user-supplied positive number; None if invalid."""
+    default = (settings.cheap_max_price_egx if market == "egx"
+               else settings.cheap_max_price_us)
+    if raw is None:
+        return default
+    try:
+        value = float(raw)
+    except ValueError:
+        return None
+    return value if value > 0 else None
+
+
+def _cheap_lines(reports, market: str, max_price: float, lang: str) -> list[str]:
+    currency = "EGP" if market == "egx" else "USD"
+    lines = [t("cheap_title", lang, market=market.upper(),
+               price=max_price, currency=currency), ""]
+    for i, r in enumerate(reports, 1):
+        lines.append(
+            f"{i}. {r.sharia.badge} {rec_emoji(r.rec.label)} <b>{r.symbol}</b> — "
+            f"{r.price:.2f} {r.currency} — {r.rec.composite:.0f}/100 ({r.rec.label})")
+    lines += ["", t("sharia_footer", lang), "",
+              "Use /analyze &lt;SYMBOL&gt; for the full report."]
+    return lines
+
+
+async def cmd_cheap(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Cheap + Sharia-compliant stocks: /cheap [egx|us] [max_price]."""
+    lang = _lang(update.effective_user.id)
+    args = context.args or []
+    market = args[0].lower() if args else None
+    if market not in ("egx", "us"):
+        await update.message.reply_text(
+            t("cheap_pick", lang, egx=settings.cheap_max_price_egx,
+              usd=settings.cheap_max_price_us),
+            reply_markup=cheap_picker(), parse_mode=ParseMode.HTML)
+        return
+    max_price = _cheap_threshold(market, args[1] if len(args) > 1 else None)
+    if max_price is None:
+        await update.message.reply_text(t("cheap_usage", lang))
+        return
+    await _do_cheap_scan(update, market, max_price, lang)
+
+
+async def _do_cheap_scan(update: Update, market: str, max_price: float, lang: str) -> None:
+    currency = "EGP" if market == "egx" else "USD"
+    status = await update.message.reply_text(
+        t("cheap_scanning", lang, market=market.upper(),
+          price=max_price, currency=currency),
+        parse_mode=ParseMode.HTML)
+    await _chat_action(update, ChatAction.TYPING)
+    reports = await service.scan_cheap(market, max_price, top_n=10)
+    await status.delete()
+    if not reports:
+        await update.message.reply_text(
+            t("cheap_empty", lang, market=market.upper(), price=max_price,
+              currency=currency, market_lower=market),
+            parse_mode=ParseMode.HTML)
+        return
+    await update.message.reply_text(
+        "\n".join(_cheap_lines(reports, market, max_price, lang)),
+        parse_mode=ParseMode.HTML)
 
 
 async def cmd_glossary(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:

@@ -46,6 +46,7 @@ def main() -> None:
     app.add_handler(CommandHandler("digest", handlers.cmd_digest))
     app.add_handler(CommandHandler("settings", handlers.cmd_settings))
     app.add_handler(CommandHandler("sharia", handlers.cmd_sharia))
+    app.add_handler(CommandHandler("cheap", handlers.cmd_cheap))
     app.add_handler(CommandHandler("glossary", handlers.cmd_glossary))
     app.add_handler(CommandHandler("portfolio", handlers.cmd_portfolio))
     app.add_handler(CallbackQueryHandler(handlers.on_callback))

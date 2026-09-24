@@ -28,6 +28,8 @@ and generates **BUY / HOLD / AVOID recommendations** with complete trade plans f
 - `/sharia egx|us|etf` — ☪️ scan **Sharia-compliant** candidates only
   (AAOIFI-inspired: no prohibited activities + debt & cash < 33% of market cap;
   Islamic ETFs HLAL, SPUS, UMMA, SPSK recognized automatically)
+- `/cheap egx|us [max_price]` — 💸☪️ Sharia-compliant stocks under a price cap
+  (default: 50 EGP in Egypt / 10 USD in the US; e.g. `/cheap egx 30`)
 - `/glossary RSI` — 📖 plain-language explanation of any term (EN/العربية);
   every report also auto-includes a **"Terms explained"** block for the
   abbreviations it used

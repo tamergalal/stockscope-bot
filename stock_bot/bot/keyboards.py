@@ -27,6 +27,14 @@ def market_picker(prefix: str = "scan") -> InlineKeyboardMarkup:
     ]])
 
 
+def cheap_picker() -> InlineKeyboardMarkup:
+    """Market picker for /cheap — stocks only (no ETF price threshold)."""
+    return InlineKeyboardMarkup([[
+        InlineKeyboardButton("🇪🇬 EGX (< 50 EGP)", callback_data="cheap:egx"),
+        InlineKeyboardButton("🇺🇸 US (< 10 USD)", callback_data="cheap:us"),
+    ]])
+
+
 def settings_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup([
         [

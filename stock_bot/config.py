@@ -57,6 +57,10 @@ class Settings:
     # Alert checker cadence (seconds)
     alert_check_interval: int = 900  # 15 minutes
 
+    # /cheap command: default max share price for "cheap & Sharia-compliant" scans
+    cheap_max_price_egx: float = _get_float("CHEAP_MAX_PRICE_EGX", 50.0)   # EGP
+    cheap_max_price_us: float = _get_float("CHEAP_MAX_PRICE_US", 10.0)     # USD
+
     # Deployment mode: "polling" (local/VPS) or "webhook" (Render/Koyeb/etc.)
     mode: str = os.getenv("MODE", "polling").lower()
     webhook_url: str = os.getenv("WEBHOOK_URL", "")   # e.g. https://your-app.onrender.com

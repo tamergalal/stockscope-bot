@@ -123,3 +123,19 @@ class AnalysisService:
         reports = [r for r in analyzed if r.sharia.status != "NON_COMPLIANT"]
         reports.sort(key=lambda r: r.rec.composite, reverse=True)
         return reports[:top_n]
+
+    async def scan_cheap(self, market: str, max_price: float,
+                         top_n: int = 10) -> list[FullReport]:
+        """Sharia-compliant stocks priced at/below max_price, ranked by score.
+
+        Unlike scan_sharia, the universe is the FULL market list (not just the
+        Sharia seed lists) — compliance and price are both checked from live
+        data, so cheap names outside the seeds are found too.
+        """
+        from ..data.symbols import EGX_SYMBOLS, US_SYMBOLS
+        universe = {"egx": EGX_SYMBOLS, "us": US_SYMBOLS}.get(market, {})
+        analyzed = await self._analyze_many(list(universe))
+        reports = [r for r in analyzed
+                   if r.sharia.status != "NON_COMPLIANT" and r.price <= max_price]
+        reports.sort(key=lambda r: r.rec.composite, reverse=True)
+        return reports[:top_n]

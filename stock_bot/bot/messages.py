@@ -26,6 +26,7 @@ CATALOG: dict[str, dict[str, str]] = {
             "/digest on|off — daily market digest\n"
             "/settings — language & risk profile\n"
             "/sharia &lt;egx|us|etf&gt; — ☪️ Sharia-compliant picks\n"
+            "/cheap &lt;egx|us&gt; [max_price] — 💸☪️ cheap Sharia-compliant stocks\n"
             "/glossary &lt;term&gt; — 📖 explain any term (RSI, P/E, …)\n"
             "/portfolio add|remove|list — 💼 track your holdings P/L\n"
             "/disclaimer — legal disclaimer"
@@ -58,6 +59,14 @@ CATALOG: dict[str, dict[str, str]] = {
         "sharia_footer": ("<i>Screening: no prohibited activities + debt & cash < 33% of market cap "
                           "(AAOIFI-inspired). Verify with Zoya/Islamicly or your scholar.</i>"),
         "glossary_unknown": "❓ Unknown term: <b>{term}</b>. Use /glossary to list all terms.",
+        "cheap_pick": ("💸 Find <b>Sharia-compliant</b> stocks under <b>{egx:g} EGP</b> "
+                       "(EGX) or <b>{usd:g} USD</b> (US) — pick a market:"),
+        "cheap_scanning": ("💸 Scanning <b>{market}</b> for Sharia-compliant stocks "
+                           "under <b>{price:g} {currency}</b>…"),
+        "cheap_title": "💸☪️ Cheap &amp; Sharia-compliant — {market} (under {price:g} {currency})",
+        "cheap_empty": ("No Sharia-compliant {market} stocks under {price:g} {currency} "
+                        "right now. Try /cheap {market_lower} with a higher price."),
+        "cheap_usage": "Usage: /cheap egx  |  /cheap us  |  /cheap egx 30  |  /cheap us 5",
         "portfolio_usage": "Usage: /portfolio add AAPL 10 150.5  |  /portfolio remove AAPL  |  /portfolio list",
         "portfolio_added": "💼 Added <b>{qty:g} × {symbol}</b> @ {price:g} to your portfolio.",
         "portfolio_removed": "🗑 Removed <b>{symbol}</b> from your portfolio.",
@@ -88,6 +97,7 @@ CATALOG: dict[str, dict[str, str]] = {
             "/digest on|off — ملخص يومي\n"
             "/settings — اللغة والمخاطرة\n"
             "/sharia &lt;egx|us|etf&gt; — ☪️ فرص متوافقة مع الشريعة\n"
+            "/cheap &lt;egx|us&gt; [max_price] — 💸☪️ أسهم رخيصة متوافقة شرعًا\n"
             "/glossary &lt;term&gt; — 📖 شرح أي مصطلح (RSI, P/E, …)\n"
             "/portfolio add|remove|list — 💼 متابعة أرباح/خسائر محفظتك\n"
             "/disclaimer — إخلاء المسؤولية"
@@ -120,6 +130,14 @@ CATALOG: dict[str, dict[str, str]] = {
         "sharia_footer": ("<i>الفحص: استبعاد الأنشطة المحرمة + الدين والنقدية أقل من 33% من "
                           "القيمة السوقية (معايير AAOIFI). تحقق عبر Zoya/Islamicly أو عالمك.</i>"),
         "glossary_unknown": "❓ مصطلح غير معروف: <b>{term}</b>. استخدم /glossary لعرض الكل.",
+        "cheap_pick": ("💸 أسهم <b>متوافقة مع الشريعة</b> بسعر أقل من <b>{egx:g} جنيه</b> "
+                       "(مصر) أو <b>{usd:g} دولار</b> (أمريكا) — اختر السوق:"),
+        "cheap_scanning": ("💸 جاري البحث في <b>{market}</b> عن أسهم متوافقة شرعًا "
+                           "بسعر أقل من <b>{price:g} {currency}</b>…"),
+        "cheap_title": "💸☪️ أسهم رخيصة ومتوافقة شرعًا — {market} (أقل من {price:g} {currency})",
+        "cheap_empty": ("لا توجد أسهم متوافقة شرعًا في {market} بسعر أقل من {price:g} "
+                        "{currency} حاليًا. جرّب /cheap {market_lower} بسعر أعلى."),
+        "cheap_usage": "الاستخدام: /cheap egx  |  /cheap us  |  /cheap egx 30  |  /cheap us 5",
         "portfolio_usage": "الاستخدام: /portfolio add AAPL 10 150.5  |  /portfolio remove AAPL  |  /portfolio list",
         "portfolio_added": "💼 تمت إضافة <b>{qty:g} × {symbol}</b> بسعر {price:g} لمحفظتك.",
         "portfolio_removed": "🗑 تم حذف <b>{symbol}</b> من محفظتك.",
